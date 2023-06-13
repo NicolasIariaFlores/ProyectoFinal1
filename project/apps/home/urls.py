@@ -1,4 +1,4 @@
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+#from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
 
 from . import views
@@ -8,4 +8,4 @@ urlpatterns = [
     path("login/", views.login_request, name="login")
 ]
 
-urlpatterns += staticfiles_urlpatterns
+#urlpatterns += staticfiles_urlpatterns
