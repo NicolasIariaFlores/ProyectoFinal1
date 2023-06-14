@@ -13,5 +13,6 @@
 
     {% if user.is_staff %}
         <p><a href="{% url "admin:index" %}">Administracion</a></p>
+        <p><a href="{% url "home:register" %}">Registrar nuevo cliente</a></p>
     {% endif %}
 {% endblock CONTENIDO %}

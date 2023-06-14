@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
-
+from . import forms
 # * Para el login
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
@@ -24,11 +24,12 @@ def login_request(request):
 
 def register(request):
     if request.method == "POST": 
-        form = UserCreationForm(request.POST)
+        #form = UserCreationForm(request.POST)
+        form = forms.CustomUserCreationForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["username"]
             form.save()
             return render(request, "home/index.html", {"mensaje" : "¡Usuario creado!"})
     else:
-        form = UserCreationForm()
+        form = forms.CustomUserCreationForm()
     return render(request, "home/register.html", {"form" : form})
