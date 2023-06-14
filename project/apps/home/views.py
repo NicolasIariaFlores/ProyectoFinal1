@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponse
 
 # * Para el login
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 def index(request: HttpRequest) -> HttpResponse:
     return render(request, "home/index.html")
@@ -22,3 +22,13 @@ def login_request(request):
         form = AuthenticationForm()
     return render(request, "home/login.html", {"form":form})
 
+def register(request):
+    if request.method == "POST": 
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data["username"]
+            form.save()
+            return render(request, "home/index.html", {"mensaje" : "¡Usuario creado!"})
+    else:
+        form = UserCreationForm()
+    return render(request, "home/register.html", {"form" : form})

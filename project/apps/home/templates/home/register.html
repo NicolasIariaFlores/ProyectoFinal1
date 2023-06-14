@@ -1,0 +1,9 @@
+{% extends 'home/base.html' %}
+
+{% block CONTENIDO %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-info"> REGISTRARSE </button>
+    </form>
+{% endblock CONTENIDO %}

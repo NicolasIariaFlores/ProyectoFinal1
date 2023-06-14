@@ -6,4 +6,12 @@
 
 {% block CONTENIDO %}
     <h2>ESTE ES CONTENIDO DEL INDEX</h2>
+
+    {% if user.is_authenticated %}
+        <p> {{mensaje}} </p>
+    {% endif %}
+
+    {% if user.is_staff %}
+        <p><a href="{% url "admin:index" %}">Administracion</a></p>
+    {% endif %}
 {% endblock CONTENIDO %}
