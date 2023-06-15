@@ -44,6 +44,7 @@ INSTALLED_APPS += [
     "home",
     "producto",
     "cliente",
+    "aboutus",
 ]
 
 MIDDLEWARE = [

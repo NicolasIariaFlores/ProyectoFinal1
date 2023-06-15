@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+
+{% block CONTENIDO %}
+    <h5>
+        Mi nombre es Nicolas Iaria Flores, esta es la primer pagina que hago.
+        Estudie un tiempo programacion para videojuegos, pero por curiosidad y para ampliar
+        mi conocimiento decidi estudiar Python.
+        Soy de Argentina, CABA y tengo 24 años. 
+    </h5>
+        
+    <a href="{% url 'home:index' %}">Volver al inicio</a>
+{% endblock CONTENIDO %}
