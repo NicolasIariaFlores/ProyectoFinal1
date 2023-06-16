@@ -1,7 +1,15 @@
 {% extends 'home/base.html' %}
 
 {% block CONTENIDO %}
-    <h5>Aca vas a ver productos</h5>
+    <h1>Productos</h1>
+
+    {% block CONTENIDO_PRODUCTO %}
+    
+        <h3>Categorias de productos</h3>
+        <a href="{% url 'producto:producto_categoria_list' %}">Listar</a>
+        <a href="{% url 'producto:producto_categoria_create' %}">Crear</a>
+    
+    {% endblock CONTENIDO_PRODUCTO %}
         
     <a href="{% url 'home:index' %}">Volver al inicio</a>
 {% endblock CONTENIDO %}

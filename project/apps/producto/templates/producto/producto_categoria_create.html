@@ -1,0 +1,14 @@
+{% extends 'producto/index.html' %}
+
+{% block CONTENIDO_PRODUCTO %}
+    
+    <h2>Crear categorias.</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Crear</button>
+    </form>
+
+    <a href="{% url 'producto:index' %}">Volver a producto</a>
+{% endblock CONTENIDO_PRODUCTO %}
