@@ -12,3 +12,12 @@ class ProductoCategoria(models.Model):
     def __str__(self) -> str:
         return self.nombre
 
+class Producto(models.Model):
+    nombre = models.CharField(max_length=100, null=False)
+    medida = models.CharField(max_length=100, null=True, blank=True)
+    descripcion = models.CharField(max_length=200, null=True, blank=True)
+    #categoria = 
+
+    def __str__(self) -> str:
+        return self.nombre
+

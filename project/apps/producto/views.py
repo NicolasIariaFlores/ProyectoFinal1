@@ -20,3 +20,18 @@ def producto_categoria_create(request):
     else:
         form = forms.ProductoCategoriaForm()
         return render(request, "producto/producto_categoria_create.html", {"form":form})
+    
+def producto_create(request):
+    if request.method == "POST":
+        form = forms.ProductoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("producto:index")
+    else:
+        form = forms.ProductoForm()
+        return render(request, "producto/producto_create.html",  {"form":form}) 
+    
+def producto_list(request):
+    productos = models.Producto.objects.all()
+    context = {"productos":productos}
+    return render(request, "producto/producto_list.html", context)

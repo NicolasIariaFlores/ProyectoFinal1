@@ -33,3 +33,6 @@ def register(request):
     else:
         form = forms.CustomUserCreationForm()
     return render(request, "home/register.html", {"form" : form})
+
+def contactar(request):
+    return render(request, "home/contacto.html")

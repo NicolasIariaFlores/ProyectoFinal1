@@ -7,3 +7,7 @@ class ProductoCategoriaAdmin(admin.ModelAdmin):
     search_fields = ("nombre",) 
     list_filter = ("nombre",)
     ordering = ("nombre",)
+
+@admin.register(models.Producto)
+class ProductoAdmin(admin.ModelAdmin):
+    list_display = ("nombre", "medida", "descripcion")

@@ -1,6 +1,6 @@
 {% extends 'producto/index.html' %}
 
-{% block CONTENIDO_PRODUCTO %}
+{% block CONTENIDO_CATEGORIA_PRODUCTO %}
     
     <h2>Lista de categorias de productos.</h2>
 
@@ -10,5 +10,5 @@
         </ul>
     {% endfor %}
 
-    <a href="{% url 'producto:index' %}">Volver a PRODUCTOS</a>
-{% endblock CONTENIDO_PRODUCTO %}
+    <a href="{% url 'producto:index' %}">Volver a PRODUCTOS</a><br>
+{% endblock CONTENIDO_CATEGORIA_PRODUCTO %}
