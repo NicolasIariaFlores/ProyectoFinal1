@@ -16,7 +16,8 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=100, null=False)
     medida = models.CharField(max_length=100, null=True, blank=True)
     descripcion = models.CharField(max_length=200, null=True, blank=True)
-    #categoria = 
+    categoria = models.ForeignKey(ProductoCategoria, on_delete=models.SET_NULL, null=True)
+    #imagen = models.ImageField(upload_to="photos", default=None)
 
     def __str__(self) -> str:
         return self.nombre

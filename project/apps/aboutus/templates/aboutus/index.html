@@ -1,12 +1,13 @@
 {% extends 'home/base.html' %}
 
 {% block CONTENIDO %}
-    <h5>
-        Mi nombre es Nicolas Iaria Flores, esta es la primer pagina que hago.
-        Estudie un tiempo programacion para videojuegos, pero por curiosidad y para ampliar
-        mi conocimiento decidi estudiar Python.
-        Soy de Argentina, CABA y tengo 24 años. 
-    </h5>
-        
-    <a href="{% url 'home:index' %}">Volver al inicio</a>
+    <h1>
+        <br><h5 class="text-center">Mi nombre es Nicolas Iaria Flores, esta es la primer pagina que hago.</h5>
+        <br><h5 class="text-center">MEstudie un tiempo programacion para videojuegos, pero por curiosidad y para ampliar
+            mi conocimiento decidi estudiar Python.</h5>
+        <br><h5 class="text-center">Soy de Argentina, CABA y tengo 24 años.</h5>
+    </h1>
+    
+    <a class="btn btn-outline-info" href="{% url 'home:index' %}">Volver al inicio</a>
+
 {% endblock CONTENIDO %}

@@ -2,19 +2,25 @@
 
 {% block CONTENIDO %}
 
-    <h1>Productos</h1>
+    <h1 class="text-lg-center">Productos</h1>
 
     {% block CONTENIDO_PRODUCTO %}
         <h3>Productos</h3>
-        <a href="{% url 'producto:producto_list' %}">¡PRODUCTOS!</a><br>
-        <a href="{% url 'producto:producto_create' %}">Crear producto.</a>
+        <a class="btn btn-primary" href="{% url 'producto:producto_list' %}">¡PRODUCTOS!</a><br>
+        <a class="btn btn-dark"  href="{% url 'producto:producto_create' %}">Crear productos</a>
     {% endblock CONTENIDO_PRODUCTO %}
+
+    <p></p>
+    <p></p>
+    <p></p>
 
     {% block CONTENIDO_CATEGORIA_PRODUCTO %}
         <h3>Categorias de productos</h3>
-        <a href="{% url 'producto:producto_categoria_list' %}">Listar</a><br>
-        <a href="{% url 'producto:producto_categoria_create' %}">Crear categoria para productos.</a><br>
+        <a class="btn btn-primary" href="{% url 'producto:producto_categoria_list' %}">Ver categorias</a><br>
+        <a class="btn btn-dark" href="{% url 'producto:producto_categoria_create' %}">Crear categoria para productos.</a><br>
     {% endblock CONTENIDO_CATEGORIA_PRODUCTO %}
         
-    <a href="{% url 'home:index' %}">Volver al inicio</a>
+    <h1 class="text-center">
+        <a class="btn btn-outline-info" href="{% url 'home:index' %}">Volver al inicio</a>
+    </h1>
 {% endblock CONTENIDO %}
