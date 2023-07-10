@@ -1,0 +1,14 @@
+{% extends 'sucursales/index.html' %}
+
+{% block CONTENIDO %}
+    
+    <h2>Ingresar sucursal</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Crear</button>
+    </form>
+
+    <a href="{% url 'sucursales:index' %}">Volver a producto</a>
+{% endblock CONTENIDO %}

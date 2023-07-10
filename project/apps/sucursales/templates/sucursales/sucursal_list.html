@@ -1,0 +1,14 @@
+{% extends 'sucursales/index.html' %}
+
+{% block CONTENIDO %}
+    
+    <h2>¡SUCURSALES!</h2>
+
+    {% for sucursal in sucursales %}
+       <ul> 
+           <li> {{sucursal}} </li>
+        </ul>
+    {% endfor %}
+
+    <a class="btn btn-outline-info" href="{% url 'sucursales:index' %}">Volver</a><br>
+{% endblock CONTENIDO %}

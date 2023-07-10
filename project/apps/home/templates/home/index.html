@@ -14,31 +14,24 @@
     <div class="row gx-4 gx-lg-5">
         <div class="col-md-4 mb-5">
             <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">¡Semana de la dulzura!</h2>
-                    <p class="card-text">Las mejores ofertas para regalar dulzura.</p>
+                <div class="card w-150">
+                    <div class="card-body">
+                        <h2 class="card-title">¡Semana de la dulzura!</h2>
+                        <p class="card-text">Las mejores ofertas para regalar dulzura.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'cliente:index' %}">Ir a</a></div>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'cliente:index' %}">Ir a</a></div>
             </div>
         </div>
+        
         <div class="col-md-4 mb-5">
             <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="card-title">Card Two</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                    <h2 class="card-title">Sucursales</h2>
+                    <p class="card-text"> ¡Conoce nuestras sucursales y encontra la mas cercana!</p>
                 </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'sucursales:index' %}">Ir a</a></div>
             </div>
         </div>
-        <div class="col-md-4 mb-5">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">Card Three</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                </div>
-                <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
-            </div>
-        </div>
-    </div>
-    </div>    
+    </div>  
 {% endblock CONTENIDO %}

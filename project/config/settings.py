@@ -45,6 +45,7 @@ INSTALLED_APPS += [
     "producto",
     "cliente",
     "aboutus",
+    "sucursales",
 ]
 
 MIDDLEWARE = [
